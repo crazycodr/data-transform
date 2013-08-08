@@ -178,7 +178,10 @@ class TransformingIterator implements \iterator, TransformerContainerInterface
         next($this->datasource);
 
         //Process the transformers
-        $this->transformedData = $this->transform(current($this->datasource), key($this->datasource));
+        if($this->valid())
+        {
+            $this->transformedData = $this->transform(current($this->datasource), key($this->datasource));   
+        }
 
 	}
 
@@ -193,7 +196,11 @@ class TransformingIterator implements \iterator, TransformerContainerInterface
         reset($this->datasource);
 
         //Process the transformers
-        $this->transformedData = $this->transform(current($this->datasource), key($this->datasource));
+        if($this->valid())
+        {
+            $this->transformedData = $this->transform(current($this->datasource), key($this->datasource));   
+        }
+        
     }
 
     /**
