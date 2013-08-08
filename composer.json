@@ -1,6 +1,6 @@
 {
-    "name": "crazycodr/data-filter",
-    "description": "Used to filter out data from an enumerable source using more flexible patterns than the filter iterator spl class",
+    "name": "crazycodr/data-transform",
+    "description": "Used to transform out data from an enumerable source",
     "license": "MIT",
     "authors": [
         {
