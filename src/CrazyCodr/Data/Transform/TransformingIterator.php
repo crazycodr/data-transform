@@ -178,7 +178,7 @@ class TransformingIterator implements \iterator, TransformerContainerInterface
         next($this->datasource);
 
         //Process the transformers
-        $this->transformedData = $this->getTransformerContainer()->transform(current($this->datasource), key($this->datasource));
+        $this->transformedData = $this->transform(current($this->datasource), key($this->datasource));
 
 	}
 
@@ -191,6 +191,9 @@ class TransformingIterator implements \iterator, TransformerContainerInterface
     public function rewind()
     {
         reset($this->datasource);
+
+        //Process the transformers
+        $this->transformedData = $this->transform(current($this->datasource), key($this->datasource));
     }
 
     /**
@@ -203,6 +206,22 @@ class TransformingIterator implements \iterator, TransformerContainerInterface
     public function valid()
     {
         return key($this->datasource) !== NULL;
+    }
+
+    /**
+     * When called with data, a key and an optional current transformation state value, the function should attempt to resolve
+     * some kind of transformation decision operation and return the newly changed item. If the item being passed in $transformedData
+     * is an object and you think this object should not be modified, remember to clone the object.
+     * 
+     * @param mixed $data Data to be used in the transforming operation
+     * @param mixed $key  Identification key to be used in the transforming operation
+     * @param mixed $transformedData Current state of the transformation as already applied by other transformers
+     * 
+     * @return mixed New state of the transformed data
+     */
+    function transform($data, $key, $transformedData = NULL)
+    {
+        return $this->getTransformerContainer()->transform($data, $key, $transformedData);
     }
 
     /**

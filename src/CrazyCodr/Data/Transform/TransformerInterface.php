@@ -19,8 +19,8 @@ interface TransformerInterface
      * some kind of transformation decision operation and return the newly changed item. If the item being passed in $transformedData
      * is an object and you think this object should not be modified, remember to clone the object.
      * 
-     * @param mixed $data Data to be used in the filtering operation
-     * @param mixed $key  Identification key to be used in the filtering operation
+     * @param mixed $data Data to be used in the transforming operation
+     * @param mixed $key  Identification key to be used in the transforming operation
      * @param mixed $transformedData Current state of the transformation as already applied by other transformers
      * 
      * @return mixed New state of the transformed data
