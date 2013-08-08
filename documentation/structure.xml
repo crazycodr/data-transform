@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project version="2.0.0b8&#10;">
+  <file path="TransformerInterface.php" generated-path="TransformerInterface.html" hash="ba8b447d30e5beac3a9b5e4c8dd2dbf9" package="">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+    </docblock>
+    <interface namespace="CrazyCodr\Data\Transform" line="14" package="\CrazyCodr/Data-Transform">
+      <name>TransformerInterface</name>
+      <full_name>\CrazyCodr\Data\Transform\TransformerInterface</full_name>
+      <docblock line="14">
+        <description>This interface dictates what a transformer should be able to do naturaly</description>
+        <long-description></long-description>
+        <tag name="category" description="Interfaces" line="14"/>
+        <tag name="package" description="CrazyCodr/Data-Transform" line="14"/>
+        <tag name="author" description="CrazyOne@CrazyCoders" line="14"/>
+        <tag name="license" description="MIT" line="14" link="http://opensource.org/licenses/MIT"/>
+        <tag name="link" description="crazycoders.net" line="14"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="28" package="\CrazyCodr/Data-Transform">
+        <name>transform</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerInterface::transform()</full_name>
+        <docblock line="28">
+          <description>When called with data, a key and an optional current transformation state value, the function should attempt to resolve
+some kind of transformation decision operation and return the newly changed item. If the item being passed in $transformedData
+is an object and you think this object should not be modified, remember to clone the object.</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Data to be used in the transforming operation&lt;/p&gt;" line="28" type="mixed" variable="$data">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;Identification key to be used in the transforming operation&lt;/p&gt;" line="28" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;Current state of the transformation as already applied by other transformers&lt;/p&gt;" line="28" type="mixed" variable="$transformedData">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" description="New state of the transformed data" line="28" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$data</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0">
+          <name>$transformedData</name>
+          <default>NULL</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+    </interface>
+    <source>eJylVMGO0zAQPRMp/zCHHqAq7QcAYqVyqbQslyIue5nYk8bUsSPb2RIQ/85Mkjq7C3siUqTEM/PmzXuTvP/YNV1ZlIXDlmKHimAf8Oew9zrcf8KE98eALtY+tO8kbbdel8Uajo2JYFyiUEuJNiphogiXBhMgpGsNBYiN762GigArS5A8aA8OUx/QDowlcDeKq08+DHC4YsbxnAmd8USwkNoJqbeZ1JiFfWp8gDnri6ObazqFCccaRS4yzufDcT5wZ5BLSaYaM7eOEgd3ZbFMdlwmydTK4pdIIdWjHCPOGr415EChtaThYlIDmpluWI0zDYBO8w2+S8Y7tKD6EMilRSmUAESRER7Q9rSB1BDUvVNTZJIRU6K2SyJjoOjtA+X+0bcEZ8ONfP0cV5MyUR58R2E6EkaB2AY3NnJ0sQOoBt2J+RvusoVDPYbkhf0z7gQdxihhB6vFYy2WZBq8GDJo9Z1UGpsMvmcY0TvJ1syReR7nk6xG67WpDekNU2qprXhveEJlvaORwlS0zU3yA29IwBZa84NprURxEDZSzbD9TFYgMl+ZI8vwApBYBgfNDjEtNQkmZ/8J+0wz2M9bMNnu66eIs0+spw2Empeo6yyLBNUAnjPD4+8s/kOb2d6p+R1dXujDQf3IQd7/V3ntctLr1bTOIs3m70k+wN3X29s34z/i9x+nH3Ax</source>
+  </file>
+  <file path="TransformerContainerInterface.php" generated-path="TransformerContainerInterface.html" hash="9ec66828c18c15db6c36dcf470878d9a" package="">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+    </docblock>
+    <interface namespace="CrazyCodr\Data\Transform" line="14" package="\CrazyCodr/Data-Transform">
+      <extends>\CrazyCodr\Data\Transform\TransformerInterface</extends>
+      <name>TransformerContainerInterface</name>
+      <full_name>\CrazyCodr\Data\Transform\TransformerContainerInterface</full_name>
+      <docblock line="14">
+        <description>This interface dictates what a transformer container should be able to do naturaly</description>
+        <long-description></long-description>
+        <tag name="category" description="Interfaces" line="14"/>
+        <tag name="package" description="CrazyCodr/Data-Transform" line="14"/>
+        <tag name="author" description="CrazyOne@CrazyCoders" line="14"/>
+        <tag name="license" description="MIT" line="14" link="http://opensource.org/licenses/MIT"/>
+        <tag name="link" description="crazycoders.net" line="14"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="28" package="\CrazyCodr/Data-Transform">
+        <name>addTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainerInterface::addTransformer()</full_name>
+        <docblock line="28">
+          <description>Adds a transformer with $name to the container
+If the $name is not set, a new automatic numeric index is used</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Transformer to add to the container for later processing&lt;/p&gt;" line="28" type="\CrazyCodr\Data\Transform\TransformerInterface" variable="$transformer">
+            <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;If null (Default) will simply add the Transformer with a new key, else tries to add the current Transformer with the new Transformer&lt;/p&gt;&#10;" line="28" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="throws" description="Thrown if the $name already exists" line="28" type="\CrazyCodr\Data\Transform\TransformerAlreadyExistsException">
+            <type>\CrazyCodr\Data\Transform\TransformerAlreadyExistsException</type>
+          </tag>
+          <tag name="return" description="Index/Name of the added Transformer" line="28" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$transformer</name>
+          <default></default>
+          <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+        </argument>
+        <argument line="0">
+          <name>$name</name>
+          <default>NULL</default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="40" package="\CrazyCodr/Data-Transform">
+        <name>setTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainerInterface::setTransformer()</full_name>
+        <docblock line="40">
+          <description>Replaces a transformer with $name</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Transformer to add to the container for later processing&lt;/p&gt;" line="40" type="\CrazyCodr\Data\Transform\TransformerInterface" variable="$transformer">
+            <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;Name of the Transformer to replace&lt;/p&gt;" line="40" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="throws" description="Thrown if the $name cannot be found" line="40" type="\CrazyCodr\Data\Transform\TransformerNotFoundException">
+            <type>\CrazyCodr\Data\Transform\TransformerNotFoundException</type>
+          </tag>
+          <tag name="return" description="Index/Name of the added/set transformer" line="40" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$transformer</name>
+          <default></default>
+          <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+        </argument>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="49" package="\CrazyCodr/Data-Transform">
+        <name>hasTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainerInterface::hasTransformer()</full_name>
+        <docblock line="49">
+          <description>Finds if a transformer exists in this collection</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Name of the transformer you want to find&lt;/p&gt;" line="49" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="return" description="Does the transformer exist in the collection" line="49" type="bool">
+            <type>bool</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="58" package="\CrazyCodr/Data-Transform">
+        <name>removeTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainerInterface::removeTransformer()</full_name>
+        <docblock line="58">
+          <description>Removes a transformer with $name</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Name of the transformer you want to find&lt;/p&gt;" line="58" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="throws" description="Thrown if the $name cannot be found" line="58" type="\CrazyCodr\Data\Transform\TransformerNotFoundException">
+            <type>\CrazyCodr\Data\Transform\TransformerNotFoundException</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="63" package="\CrazyCodr/Data-Transform">
+        <name>clearTransformers</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainerInterface::clearTransformers()</full_name>
+        <docblock line="63">
+          <description>Clears the collection of transformers</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="74" package="\CrazyCodr/Data-Transform">
+        <name>getTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainerInterface::getTransformer()</full_name>
+        <docblock line="74">
+          <description>Returns a specific transformer from the collection</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Name of the transformer you want to find&lt;/p&gt;" line="74" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="throws" description="Thrown if the $name cannot be found" line="74" type="\CrazyCodr\Data\Transform\TransformerNotFoundException">
+            <type>\CrazyCodr\Data\Transform\TransformerNotFoundException</type>
+          </tag>
+          <tag name="return" description="Transformer requested" line="74" type="\CrazyCodr\Data\Transform\TransformerInterface">
+            <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="81" package="\CrazyCodr/Data-Transform">
+        <name>getTransformers</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainerInterface::getTransformers()</full_name>
+        <docblock line="81">
+          <description>Returns the collection of transformers</description>
+          <long-description></long-description>
+          <tag name="return" description="Collection of all transformers in the group" line="81" type="Array">
+            <type>Array</type>
+          </tag>
+        </docblock>
+      </method>
+    </interface>
+    <source>eJzNVcFS2zAQvfsr9sABMrT5ANppmQAzmaF0hqY3LkJexxpkyZXkJm6n/95dKyaK4xTKcCAXx/bbp7fvreQPn+qyzjIjKvS1kAgzJ361M5u7uwsRxN3CCeML66qzLJtOJtkEFqXyoExAVzA+VzKIgB5WpQggIPQF6EBaE4Qy9M+XttE53COIe40QLOQWjAiNE7rNmPazJJaldS3Me27Pj0nUg1gibIVNWdi7R2EMEk0orYMN6KvBzz0aXceilUTjieXLfBHvzQPwTzJOdrj3BkM2mWbb3hbbXmZ9K4/qANcBTe5T1OPL7HeWMT1b1q0zgfOcsLv+rFQo4Yi9Z0dCiVvH+qp50T2PIDLe2AAewykxGVwBNW4rEZQE0xAjXZXJcc3IxmO+YenJyEwnqlHBcJQKSxCsTOT5nkCg16ApMwe1sxSWV2Y5WOhbcPRwI546MY3WcHyBhWh0OKH26darqtZtXKLcsTzaE/t8wPYUUFOCREnD1otiRY1zaMJ+Jb/k2uTF0I9QOrvaSfBcOxR5e7lWPvjLtcQ6KGto6AloQKVpiAilOWDskNohDbcBHy2YcyrTGy6zkYPkYz6ibdpdi8bIbmGCJZjjJ6M73Yj7CDffr69PzvbG8BZrzXvr4Ci+pZlJDRvwu9jH04ne2HBlG5P/O0wpDG8tOqAKBr8ozSltzNTU8UQJ9JJER6K8Unz8UBu7UcZ5pIOAlNE5IK3W2C09nuxBw1PO1jawErTLyPlCHfTn3loNF5Y36ICgExU14b6kgUWl8KlFh/q/xcr+/O9JfpV+X3fMBu27rq/nODDTKJwfeNr1sy3244tILk3W8MejDnOs7LCvUaqCvi+pS4Wz1Xigb9/z4eiO7sP0zHH4o0Ef8EBoy91tfXhmo6PPimyo8dw50cJsp0zQNzQt7ffY0tmmfo7UGPyfv7i6Rio=</source>
+  </file>
+  <file path="TransformerNotFoundException.php" generated-path="TransformerNotFoundException.html" hash="c45aee2519f4b0149e4aaf9ac2249559" package="">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="CrazyCodr\Data\Transform" line="16" package="\CrazyCodr/Data-Transform">
+      <extends>\OutOfRangeException</extends>
+      <name>TransformerNotFoundException</name>
+      <full_name>\CrazyCodr\Data\Transform\TransformerNotFoundException</full_name>
+      <docblock line="16">
+        <description>This exception is raised when an operation tries to access a transformer that doesn't exist in a transformer container</description>
+        <long-description></long-description>
+        <tag name="uses" description="" line="16"/>
+        <tag name="category" description="Exceptions" line="16"/>
+        <tag name="package" description="CrazyCodr/Data-Transform" line="16"/>
+        <tag name="author" description="CrazyOne@CrazyCoders" line="16"/>
+        <tag name="license" description="MIT" line="16" link="http://opensource.org/licenses/MIT"/>
+        <tag name="link" description="crazycoders.net" line="16"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="26" package="\CrazyCodr/Data-Transform">
+        <name>__construct</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerNotFoundException::__construct()</full_name>
+        <docblock line="26">
+          <description>Builds a new exception</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Name of the intended transformer that failed&lt;/p&gt;" line="26" type="mixed" variable="$name">
+            <type>mixed</type>
+          </tag>
+          <tag name="access" description="public" line="26"/>
+        </docblock>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJxtUk1r40AMPXt+hSgLbg1N7k1hy/YD9rANLDkGgjqW46G2xsxoaLul/301jpOUNj6MkfR40tPT9c+hHYxh7CkOaAluA/57u/V1WN+h4HoVkGPjQ78wZl5VpoJV6yLQq6VBnGfQIKCLVMNLSwzI4AcKONYkOIogHtBaihFQMxMdBZAWBWpPkUtRQhcFHH/BWM+CjimY3PomReXL33qZZNn8Rd7S/X6UHcSi0NaHNzjkY06rtmfcEhz1zbO+y4O+DMIkrQ8wgZZMN3s0hZGlc5Y4Ksuf36tdzM/jPDbj7IibMQmAqebGdqiiV0c5j14efOL6MJrKFuI6ntbzbkzmzmsfm1TwK7muzntkejl6sK/u/yo2YA+9e1VXfmRr4TE/vtGdky4599TSNzMadB3VE82BbTJvSE8qf8rOTbGLoUlsRymbjZoVJSQr52PTC1O8m6LQYYjl6upzvfy0FMjYGs7KWSt9p1AnejUTxaw8A/Y6WV5bPg+bQqY7fSTlxcIUH8Z8/Afin/GA</source>
+  </file>
+  <file path="TransformerAlreadyExistsException.php" generated-path="TransformerAlreadyExistsException.html" hash="8b01bc6a517dc6cf28ed83d001d8f52c" package="">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="CrazyCodr\Data\Transform" line="16" package="\CrazyCodr/Data-Transform">
+      <extends>\OutOfRangeException</extends>
+      <name>TransformerAlreadyExistsException</name>
+      <full_name>\CrazyCodr\Data\Transform\TransformerAlreadyExistsException</full_name>
+      <docblock line="16">
+        <description>This exception is raised when an operation tries to add a transformer that with a name that already exists in a transformer container</description>
+        <long-description></long-description>
+        <tag name="uses" description="" line="16"/>
+        <tag name="category" description="Exceptions" line="16"/>
+        <tag name="package" description="CrazyCodr/Data-Transform" line="16"/>
+        <tag name="author" description="CrazyOne@CrazyCoders" line="16"/>
+        <tag name="license" description="MIT" line="16" link="http://opensource.org/licenses/MIT"/>
+        <tag name="link" description="crazycoders.net" line="16"/>
+      </docblock>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="26" package="\CrazyCodr/Data-Transform">
+        <name>__construct</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerAlreadyExistsException::__construct()</full_name>
+        <docblock line="26">
+          <description>Builds a new exception</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Name of the intended transformer that failed&lt;/p&gt;" line="26" type="mixed" variable="$name">
+            <type>mixed</type>
+          </tag>
+          <tag name="access" description="public" line="26"/>
+        </docblock>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJxtUk1r40AMPXt+hSiFbA2b3NuF7fbjsIduYMkxUNSxHA+1Z4xGJs2W/vfVjO2ktPXBRtLzk96Tfvzsm94Yjx3FHi3BLeO/w22oeHuHgtsNo4914O7KmFVZmhI2jYtAL5Z6ccGDBowuUgX7hjygh9ATY64JO4ogAbCqADWcuIhBGhTYO2k0n5qPCWyZsDoovYsSwfkPf9ngBZ0nNmmS6yEqfXq260HW9V/0O7qfJxshFoV2gQ9wzMeUVqnPuCM4yV0lud+PchMIB2kCwwRae7qe0cSZpXWWfFSWh9+bMfbPeR6bcDbjlp4EwJQrY1uMETYnOb9GtfdZ7HE+FS/kq/i1qFdjUoO0ityphJvBtYpWG2l/2stcnb+qmLGDzr3ops6z43/SK9TqPKnTqaeWPu2oRtdSNdEc2dBaUjH98KQeTNmVKcYY6sHbLOXxUTcWhQcr33LTC1O8mqLQYcjL5eX7+uKdM/kkKjhbLBvpWoU60UuaKJaLs3R18630TFER6VjswIn365NZXFyZ4s2Yt/9d0PxO</source>
+  </file>
+  <file path="ClosureTransformer.php" generated-path="ClosureTransformer.html" hash="5e065c08b2d6e75590eca6a547e65724" package="">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="CrazyCodr\Data\Transform" line="21" package="\CrazyCodr/Data-Transform">
+      <extends/>
+      <implements>\CrazyCodr\Data\Transform\TransformerInterface</implements>
+      <name>ClosureTransformer</name>
+      <full_name>\CrazyCodr\Data\Transform\ClosureTransformer</full_name>
+      <docblock line="21">
+        <description>This class represents a transformer based on a closure.</description>
+        <long-description>The closure should accept three parameters: $data, $key and $transformedData, both not typed.
+
+The $data parameter is usually some kind of object or array of data while
+the $key is most oftenly a scalar string value representing the id of the item.
+
+The $transformedData parameter can and will be NULL on the first transformer call because nothing has been transformed yet</long-description>
+        <tag name="category" description="Transformer organisation" line="21"/>
+        <tag name="package" description="CrazyCodr/Data-Transform" line="21"/>
+        <tag name="author" description="CrazyOne@CrazyCoders" line="21"/>
+        <tag name="license" description="MIT" line="21" link="http://opensource.org/licenses/MIT"/>
+        <tag name="link" description="crazycoders.net" line="21"/>
+      </docblock>
+      <property static="false" visibility="protected" line="31" namespace="CrazyCodr\Data\Transform" package="\CrazyCodr/Data-Transform">
+        <name>$closure</name>
+        <default>NULL</default>
+        <docblock line="31">
+          <description>Contains the closure represented by this transformer closure</description>
+          <long-description></long-description>
+          <tag name="var" description="" line="31" type="\CrazyCodr\Data\Transform\closure" variable="">
+            <type>\CrazyCodr\Data\Transform\closure</type>
+          </tag>
+          <tag name="access" description="protected" line="31"/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="38" package="\CrazyCodr/Data-Transform">
+        <name>__construct</name>
+        <full_name>\CrazyCodr\Data\Transform\ClosureTransformer::__construct()</full_name>
+        <docblock line="38">
+          <description>Builds a new ClosureTransformer by specifying the closure and options</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Closure to use while transforming data, must accept three parameters with no type hint, parameter1 $data, parameter2 $key, parameter3 $transformedData = NULL&lt;/p&gt;&#10;" line="38" type="\Closure" variable="$closure">
+            <type>\Closure</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$closure</name>
+          <default></default>
+          <type>\Closure</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="51" package="\CrazyCodr/Data-Transform">
+        <name>setClosure</name>
+        <full_name>\CrazyCodr\Data\Transform\ClosureTransformer::setClosure()</full_name>
+        <docblock line="51">
+          <description>Sets the closure used by this closure transformer when transforming data
+Closure must accept three parameters with no type hint, parameter1 $data, parameter2 $key, parameter3 $transformedData = NULL</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;\Closure Closure must accept three parameters with no type hint, parameter1 $data, parameter2 $key, parameter3 $transformedData = NULL&lt;/p&gt;&#10;" line="51" type="mixed" variable="">
+            <type>mixed</type>
+          </tag>
+          <tag name="access" description="public" line="51"/>
+        </docblock>
+        <argument line="0">
+          <name>$closure</name>
+          <default></default>
+          <type>\Closure</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="63" package="\CrazyCodr/Data-Transform">
+        <name>getClosure</name>
+        <full_name>\CrazyCodr\Data\Transform\ClosureTransformer::getClosure()</full_name>
+        <docblock line="63">
+          <description>Returns the current closure used to transform data</description>
+          <long-description></long-description>
+          <tag name="access" description="public" line="63"/>
+          <tag name="return" description="Closure used to transform data" line="63" type="\Closure">
+            <type>\Closure</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="79" package="\CrazyCodr/Data-Transform">
+        <name>transform</name>
+        <full_name>\CrazyCodr\Data\Transform\ClosureTransformer::transform()</full_name>
+        <docblock line="79">
+          <description>When called with data, a key and an optional current transformation state value, the function should attempt to resolve
+some kind of transformation decision operation and return the newly changed item. If the item being passed in $transformedData
+is an object and you think this object should not be modified, remember to clone the object.</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Data to be used in the filtering operation&lt;/p&gt;" line="79" type="mixed" variable="$data">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;Identification key to be used in the filtering operation&lt;/p&gt;" line="79" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;Current state of the transformation as already applied by other transformers&lt;/p&gt;" line="79" type="mixed" variable="$transformedData">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" description="New state of the transformed data" line="79" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$data</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0">
+          <name>$transformedData</name>
+          <default>NULL</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+    </class>
+    <source>eJzNVk1v3DYQvetXzMEH19jYSHur28bo5mIgTYDWRS8GAi41WjGmSIGk7KhB/ntnSJHSrrxGgR5SX6wdDufzvRn+9KZv+6oyokPfC4mwdeLvcWtrd/9WBHF/54TxjXXddVVdXVxUF3DXKg9SC+/BYe/QowkeBISsiQ52wmMN1pBYausHh5dVuotZAL61g65BSIl9gNA6ROiFo0ACOv8jnNXkfwNnDziCMDWczQ7qt/FoZ0MLxtLlscd69hBvzraA4h38ILQewdsO4UGROduA3X1CGcA6EM6JkUXx5lOrNJKtwLbYPRnorCfNJqAhKwK8FFo48MEps4dHoQecq8Eivquil/gVsFvEd5TJIlQpTEz2SWkNO4T3f757x3VkI41yFMOyzBQEa0kxeORCtOy5FZ5kaBaaNYwYovsbKQLurRvhbmHHur0wyougrGElAsKD2CPMYLjiOF+VO6wkhtBS6SalDwZvsja1jxW0kmgoMPjt9i79Ng/Af5L1ZNS7NBzYVZXwtE3QWIamul5jFyG2EN8aKlZDcK2+VBWbZGhG2xewtSYIZXysWQZb6Q3VYjfSEbX0oJJJb7KRTd08ipNHjFsKuXc2EIiwng6u4v8ihbMcwc+xl9cp3DleMvXroHTNDDL49FwJKF7fo1TNmIGVbTJSbM9d88Va+biJqIL7yeIcSRYEC4ybiPa5GOwjMa8bCG4n6EkAjdyL1APCXdjMp68zd4vk+8ijheCHNQlSgXL4Ux2HHaEImsFIzhI+fpSUa3CDDOerxL6LV75MFoA8UJdf/eIxTJrnRfM6Kn1dYecPDIe4GfwCMFm4BM5Tu2RaLl7B4nTjG5YyI6IAolOfKadSvf9DiCtSxbYfMuoICYuu/lsgzEzMiqdg8DuGweUJMjhHc+MQEUSdktCy4S8mUg5dNL9uwYumny/Dfi7DcdaTl8PkT2X8F8OY1wnWqdmppQLy9qW9lCaN0KUkJU6RWhJot6RduEkLqzRrWvWB1iDDy1Jw3urHPFQP1/KR2ZpGn+cP26NLIg5oSo/90NykpSxbYfYUfty1cDsvXtqGzMueNgwfmxUYcxREcU4zvQrYx2gHZj6trcj/6WTKhh8etKE7W6tGYb2hiDrsdjQTKD8qt8EYQbp0+SIZ04Ml8oLu7iYkqLz2NVGIMygFeN4Itwpua36ANEqmSrHsP5g8Zu126nxq9fS4OeoXPT+EdihqAk7fa5UGKD1OuDLz5PSrikwdTa7f0y583gsdrmhRkFa0zhfPx82p8bMaFIsRkWiz5Nf1iloy75WXfM3L5us/13m+hQ==</source>
+  </file>
+  <file path="TransformingIterator.php" generated-path="TransformingIterator.html" hash="1bf6eb812317ce9bbd629bce15679f40" package="">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="CrazyCodr\Data\Transform" line="24" package="\CrazyCodr/Data-Transform">
+      <extends/>
+      <implements>\iterator</implements>
+      <implements>\CrazyCodr\Data\Transform\TransformerContainerInterface</implements>
+      <name>TransformingIterator</name>
+      <full_name>\CrazyCodr\Data\Transform\TransformingIterator</full_name>
+      <docblock line="24">
+        <description>The transform iterator class is an iterator over an iterator that features
+facilities to easily transform content of an enumerable using anonymous functions/closures
+or other types of transformInterfaces.</description>
+        <long-description>Important note, the transform iterator transforms data from it's datasource in a live fashion
+it doesn't preprocess everything. Therefore, you can add/remove transforms as you read data and
+change the way the transform iterator operates.</long-description>
+        <tag name="uses" description="" line="24"/>
+        <tag name="abstract" description="" line="24"/>
+        <tag name="category" description="Base class" line="24"/>
+        <tag name="package" description="CrazyCodr/Data-Transform" line="24"/>
+        <tag name="author" description="CrazyOne@CrazyCoders" line="24"/>
+        <tag name="license" description="MIT" line="24" link="http://opensource.org/licenses/MIT"/>
+        <tag name="link" description="crazycoders.net" line="24"/>
+      </docblock>
+      <property static="false" visibility="protected" line="34" namespace="CrazyCodr\Data\Transform" package="\CrazyCodr/Data-Transform">
+        <name>$datasource</name>
+        <default>NULL</default>
+        <docblock line="34">
+          <description>Contains the datasource that will be iterated over applying transformation functions to it</description>
+          <long-description></long-description>
+          <tag name="var" description="" line="34" type="\Traversable" variable="">
+            <type>\Traversable</type>
+          </tag>
+          <tag name="access" description="protected" line="34"/>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" line="43" namespace="CrazyCodr\Data\Transform" package="\CrazyCodr/Data-Transform">
+        <name>$container</name>
+        <default>NULL</default>
+        <docblock line="43">
+          <description>Contains the transformer container used to contain the transformers for this transformer iterator</description>
+          <long-description></long-description>
+          <tag name="var" description="" line="43" type="\CrazyCodr\Data\Transform\TransformerContainerInterface" variable="">
+            <type>\CrazyCodr\Data\Transform\TransformerContainerInterface</type>
+          </tag>
+          <tag name="access" description="protected" line="43"/>
+        </docblock>
+      </property>
+      <property static="false" visibility="protected" line="52" namespace="CrazyCodr\Data\Transform" package="\CrazyCodr/Data-Transform">
+        <name>$transformedData</name>
+        <default>NULL</default>
+        <docblock line="52">
+          <description>Contains the transformed data as of now after the next move has been done</description>
+          <long-description></long-description>
+          <tag name="var" description="" line="52" type="mixed" variable="">
+            <type>mixed</type>
+          </tag>
+          <tag name="access" description="protected" line="52"/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="64" package="\CrazyCodr/Data-Transform">
+        <name>__construct</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::__construct()</full_name>
+        <docblock line="64">
+          <description>Builds the TransformerIterator using a specific datasource</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Transformer container that will be proxied to store the different transformers&lt;/p&gt;" line="64" type="\CrazyCodr\Data\Transform\TransformerContainerInterface" variable="">
+            <type>\CrazyCodr\Data\Transform\TransformerContainerInterface</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;Contains the datasource that will be iterated and transformed&lt;/p&gt;" line="64" type="\Traversable" variable="$datasource">
+            <type>\Traversable</type>
+          </tag>
+          <tag name="throws" description="Thrown if $datasource is not an array or traversable" line="64" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+          <tag name="access" description="public" line="64"/>
+        </docblock>
+        <argument line="0">
+          <name>$transformerContainer</name>
+          <default></default>
+          <type>\CrazyCodr\Data\Transform\TransformerContainerInterface</type>
+        </argument>
+        <argument line="0">
+          <name>$datasource</name>
+          <default>NULL</default>
+          <type>\Traversable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="84" package="\CrazyCodr/Data-Transform">
+        <name>setDatasource</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::setDatasource()</full_name>
+        <docblock line="84">
+          <description>Sets the datasource to be used in the iteration context</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Datasource to be used in iteration context&lt;/p&gt;" line="84" type="\Traversable" variable="$datasource">
+            <type>\Traversable</type>
+          </tag>
+          <tag name="throws" description="Thrown if $datasource is not an array or traversable" line="84" type="\InvalidArgumentException">
+            <type>\InvalidArgumentException</type>
+          </tag>
+          <tag name="access" description="public" line="84"/>
+        </docblock>
+        <argument line="0">
+          <name>$datasource</name>
+          <default>NULL</default>
+          <type>\Traversable</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="111" package="\CrazyCodr/Data-Transform">
+        <name>getDatasource</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::getDatasource()</full_name>
+        <docblock line="111">
+          <description>Returns the current datasource used in the iteration context</description>
+          <long-description></long-description>
+          <tag name="access" description="public" line="111"/>
+          <tag name="return" description="Datasource used in the iteration context" line="111" type="\Traversable">
+            <type>\Traversable</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="123" package="\CrazyCodr/Data-Transform">
+        <name>setTransformerContainer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::setTransformerContainer()</full_name>
+        <docblock line="123">
+          <description>Sets the TransformerContainer to be used in the transformer storage context</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;TransformerContainer to use in this iterator&lt;/p&gt;" line="123" type="\CrazyCodr\Data\Transform\TransformerContainerInterface" variable="$transformerContainer">
+            <type>\CrazyCodr\Data\Transform\TransformerContainerInterface</type>
+          </tag>
+          <tag name="access" description="public" line="123"/>
+        </docblock>
+        <argument line="0">
+          <name>$transformerContainer</name>
+          <default>NULL</default>
+          <type>\CrazyCodr\Data\Transform\TransformerContainerInterface</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="135" package="\CrazyCodr/Data-Transform">
+        <name>getTransformerContainer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::getTransformerContainer()</full_name>
+        <docblock line="135">
+          <description>Returns the current TransformerContainer used in the transformer storage context</description>
+          <long-description></long-description>
+          <tag name="access" description="public" line="135"/>
+          <tag name="return" description="TransformerContainer used in the transformer storage context" line="135" type="\CrazyCodr\Data\Transform\TransformerContainerInterface">
+            <type>\CrazyCodr\Data\Transform\TransformerContainerInterface</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="149" package="\CrazyCodr/Data-Transform">
+        <name>current</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::current()</full_name>
+        <docblock line="149">
+          <description>Implentation of the Iterator SPL class for Current(),
+returns the current element of the data source
+Returns null if nothing found</description>
+          <long-description></long-description>
+          <tag name="access" description="public" line="149"/>
+          <tag name="return" description="Current value of the iterator" line="149" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="163" package="\CrazyCodr/Data-Transform">
+        <name>key</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::key()</full_name>
+        <docblock line="163">
+          <description>Implentation of the Iterator SPL class for Key(),
+returns the current element's identification of the data source
+Returns null if nothing found</description>
+          <long-description></long-description>
+          <tag name="access" description="public" line="163"/>
+          <tag name="return" description="Value." line="163" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="174" package="\CrazyCodr/Data-Transform">
+        <name>next</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::next()</full_name>
+        <docblock line="174">
+          <description>Implentation of the Iterator SPL class for Next(),
+prepares the next record in line to be read and return by Current() and Key()</description>
+          <long-description></long-description>
+          <tag name="access" description="public" line="174"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="191" package="\CrazyCodr/Data-Transform">
+        <name>rewind</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::rewind()</full_name>
+        <docblock line="191">
+          <description>Implentation of the Iterator SPL class for Rewind(),
+prepares the whole datasource for an entirely new iterator operation</description>
+          <long-description></long-description>
+          <tag name="access" description="public" line="191"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="206" package="\CrazyCodr/Data-Transform">
+        <name>valid</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::valid()</full_name>
+        <docblock line="206">
+          <description>Implentation of the Iterator SPL class for Valid(),
+Checks if the current item is a valid item for processing
+NULL keys represent an invalid item</description>
+          <long-description></long-description>
+          <tag name="access" description="public" line="206"/>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="222" package="\CrazyCodr/Data-Transform">
+        <name>transform</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::transform()</full_name>
+        <docblock line="222">
+          <description>When called with data, a key and an optional current transformation state value, the function should attempt to resolve
+some kind of transformation decision operation and return the newly changed item. If the item being passed in $transformedData
+is an object and you think this object should not be modified, remember to clone the object.</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Data to be used in the transforming operation&lt;/p&gt;" line="222" type="mixed" variable="$data">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;Identification key to be used in the transforming operation&lt;/p&gt;" line="222" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;Current state of the transformation as already applied by other transformers&lt;/p&gt;" line="222" type="mixed" variable="$transformedData">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" description="New state of the transformed data" line="222" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$data</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0">
+          <name>$transformedData</name>
+          <default>NULL</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="238" package="\CrazyCodr/Data-Transform">
+        <name>addTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::addTransformer()</full_name>
+        <docblock line="238">
+          <description>Adds a transformer with $name to the container
+If the $name is not set, a new automatic numeric index is used</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Transformer to add to the container for later processing&lt;/p&gt;" line="238" type="\CrazyCodr\Data\Transform\TransformerInterface" variable="$transformer">
+            <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;If null (Default) will simply add the Transformer with a new key, else tries to add the current Transformer with the new Transformer&lt;/p&gt;&#10;" line="238" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="throws" description="Thrown if the $name already exists" line="238" type="\CrazyCodr\Data\Transform\TransformerAlreadyExistsException">
+            <type>\CrazyCodr\Data\Transform\TransformerAlreadyExistsException</type>
+          </tag>
+          <tag name="return" description="Index/Name of the added Transformer" line="238" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$transformer</name>
+          <default></default>
+          <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+        </argument>
+        <argument line="0">
+          <name>$name</name>
+          <default>NULL</default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="253" package="\CrazyCodr/Data-Transform">
+        <name>setTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::setTransformer()</full_name>
+        <docblock line="253">
+          <description>Replaces a transformer with $name</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Transformer to add to the container for later processing&lt;/p&gt;" line="253" type="\CrazyCodr\Data\Transform\TransformerInterface" variable="$transformer">
+            <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;Name of the Transformer to replace&lt;/p&gt;" line="253" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="throws" description="Thrown if the $name cannot be found" line="253" type="\CrazyCodr\Data\Transform\TransformerNotFoundException">
+            <type>\CrazyCodr\Data\Transform\TransformerNotFoundException</type>
+          </tag>
+          <tag name="return" description="Index/Name of the added/set transformer" line="253" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$transformer</name>
+          <default></default>
+          <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+        </argument>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="265" package="\CrazyCodr/Data-Transform">
+        <name>hasTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::hasTransformer()</full_name>
+        <docblock line="265">
+          <description>Finds if a transformer exists in this collection</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Name of the transformer you want to find&lt;/p&gt;" line="265" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="return" description="Does the transformer exist in the collection" line="265" type="bool">
+            <type>bool</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="277" package="\CrazyCodr/Data-Transform">
+        <name>removeTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::removeTransformer()</full_name>
+        <docblock line="277">
+          <description>Removes a transformer with $name</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Name of the transformer you want to find&lt;/p&gt;" line="277" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="throws" description="Thrown if the $name cannot be found" line="277" type="\CrazyCodr\Data\Transform\TransformerNotFoundException">
+            <type>\CrazyCodr\Data\Transform\TransformerNotFoundException</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="285" package="\CrazyCodr/Data-Transform">
+        <name>clearTransformers</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::clearTransformers()</full_name>
+        <docblock line="285">
+          <description>Clears the collection of transformers</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="299" package="\CrazyCodr/Data-Transform">
+        <name>getTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::getTransformer()</full_name>
+        <docblock line="299">
+          <description>Returns a specific transformer from the collection</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Name of the transformer you want to find&lt;/p&gt;" line="299" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="throws" description="Thrown if the $name cannot be found" line="299" type="\CrazyCodr\Data\Transform\TransformerNotFoundException">
+            <type>\CrazyCodr\Data\Transform\TransformerNotFoundException</type>
+          </tag>
+          <tag name="return" description="Transformer requested" line="299" type="\CrazyCodr\Data\Transform\TransformerInterface">
+            <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="309" package="\CrazyCodr/Data-Transform">
+        <name>getTransformers</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformingIterator::getTransformers()</full_name>
+        <docblock line="309">
+          <description>Returns the collection of transformers</description>
+          <long-description></long-description>
+          <tag name="return" description="Collection of all transformers in the group" line="309" type="Array">
+            <type>Array</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>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</source>
+  </file>
+  <file path="TransformerContainer.php" generated-path="TransformerContainer.html" hash="f569716f90a161f2ad4639f2b5cb4a36" package="">
+    <docblock line="0">
+      <description></description>
+      <long-description></long-description>
+    </docblock>
+    <class final="false" abstract="false" namespace="CrazyCodr\Data\Transform" line="15" package="\CrazyCodr/Data-Transform">
+      <extends/>
+      <implements>\CrazyCodr\Data\Transform\TransformerInterface</implements>
+      <implements>\CrazyCodr\Data\Transform\TransformerContainerInterface</implements>
+      <name>TransformerContainer</name>
+      <full_name>\CrazyCodr\Data\Transform\TransformerContainer</full_name>
+      <docblock line="15">
+        <description>This class represents a group of transformers and is the base and probably unique
+and only class you will ever need to process groups of transformers.</description>
+        <long-description></long-description>
+        <tag name="category" description="Transformer organisation" line="15"/>
+        <tag name="package" description="CrazyCodr/Data-Transform" line="15"/>
+        <tag name="author" description="CrazyOne@CrazyCoders" line="15"/>
+        <tag name="license" description="MIT" line="15" link="http://opensource.org/licenses/MIT"/>
+        <tag name="link" description="crazycoders.net" line="15"/>
+      </docblock>
+      <property static="false" visibility="protected" line="25" namespace="CrazyCodr\Data\Transform" package="\CrazyCodr/Data-Transform">
+        <name>$transformers</name>
+        <default>array()</default>
+        <docblock line="25">
+          <description>Contains the transformers to apply</description>
+          <long-description></long-description>
+          <tag name="var" description="" line="25" type="array" variable="">
+            <type>array</type>
+          </tag>
+          <tag name="access" description="protected" line="25"/>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="38" package="\CrazyCodr/Data-Transform">
+        <name>transform</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainer::transform()</full_name>
+        <docblock line="38">
+          <description>When called with data, a key and an optional current transformation state value, the function should attempt to resolve
+some kind of transformation decision operation and return the newly changed item. If the item being passed in $transformedData
+is an object and you think this object should not be modified, remember to clone the object.</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Data to be used in the transforming operation&lt;/p&gt;" line="38" type="mixed" variable="$data">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;Identification key to be used in the transforming operation&lt;/p&gt;" line="38" type="mixed" variable="$key">
+            <type>mixed</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;Current state of the transformation as already applied by other transformers&lt;/p&gt;" line="38" type="mixed" variable="$transformedData">
+            <type>mixed</type>
+          </tag>
+          <tag name="return" description="New state of the transformed data" line="38" type="mixed">
+            <type>mixed</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$data</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0">
+          <name>$key</name>
+          <default></default>
+          <type>mixed</type>
+        </argument>
+        <argument line="0">
+          <name>$transformedData</name>
+          <default>NULL</default>
+          <type>mixed</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="58" package="\CrazyCodr/Data-Transform">
+        <name>addTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainer::addTransformer()</full_name>
+        <docblock line="58">
+          <description>Adds a transformer with $name to the container
+If the $name is not set, a new automatic index is used</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Transformer to add to the container for later processing&lt;/p&gt;" line="58" type="\CrazyCodr\Data\Transform\TransformerInterface" variable="$transformer">
+            <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;If null (Default) will simply add the transformer with a new key, else tries to add the current transformer with the new transformer&lt;/p&gt;&#10;" line="58" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="throws" description="Thrown when a transformer already exists with that $name" line="58" type="\CrazyCodr\Data\Transform\TransformerAlreadyExistsException">
+            <type>\CrazyCodr\Data\Transform\TransformerAlreadyExistsException</type>
+          </tag>
+          <tag name="return" description="Index/Name of the added transformer" line="58" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$transformer</name>
+          <default></default>
+          <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+        </argument>
+        <argument line="0">
+          <name>$name</name>
+          <default>NULL</default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="95" package="\CrazyCodr/Data-Transform">
+        <name>setTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainer::setTransformer()</full_name>
+        <docblock line="95">
+          <description>Replaces a transformer with $name</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Transformer to add to the container for later processing&lt;/p&gt;" line="95" type="\CrazyCodr\Data\Transform\TransformerInterface" variable="$transformer">
+            <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+          </tag>
+          <tag name="param" description="&lt;p&gt;Name of the transformer to replace&lt;/p&gt;" line="95" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="throws" description="Thrown when the requested transformer name was not found in the collection" line="95" type="\CrazyCodr\Data\Transform\TransformerNotFoundException">
+            <type>\CrazyCodr\Data\Transform\TransformerNotFoundException</type>
+          </tag>
+          <tag name="return" description="Index/Name of the added/set transformer" line="95" type="string">
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$transformer</name>
+          <default></default>
+          <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+        </argument>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="119" package="\CrazyCodr/Data-Transform">
+        <name>hasTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainer::hasTransformer()</full_name>
+        <docblock line="119">
+          <description>Finds if a transformer exists in this collection</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Name of the transformer you want to find&lt;/p&gt;" line="119" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="return" description="Does the transformer exist in the collection" line="119" type="bool">
+            <type>bool</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="131" package="\CrazyCodr/Data-Transform">
+        <name>removeTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainer::removeTransformer()</full_name>
+        <docblock line="131">
+          <description>Removes a transformer with $name</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Name of the transformer you want to find&lt;/p&gt;" line="131" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="throws" description="Thrown when the requested transformer name was not found in the collection" line="131" type="\CrazyCodr\Data\Transform\TransformerNotFoundException">
+            <type>\CrazyCodr\Data\Transform\TransformerNotFoundException</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="148" package="\CrazyCodr/Data-Transform">
+        <name>clearTransformers</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainer::clearTransformers()</full_name>
+        <docblock line="148">
+          <description>Clears the collection of transformers</description>
+          <long-description></long-description>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="162" package="\CrazyCodr/Data-Transform">
+        <name>getTransformer</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainer::getTransformer()</full_name>
+        <docblock line="162">
+          <description>Returns a specific transformer from the collection</description>
+          <long-description></long-description>
+          <tag name="param" description="&lt;p&gt;Name of the transformer you want to find&lt;/p&gt;" line="162" type="String" variable="$name">
+            <type>String</type>
+          </tag>
+          <tag name="throws" description="Thrown when the requested transformer name was not found in the collection" line="162" type="\CrazyCodr\Data\Transform\TransformerNotFoundException">
+            <type>\CrazyCodr\Data\Transform\TransformerNotFoundException</type>
+          </tag>
+          <tag name="return" description="Transformer requested" line="162" type="\CrazyCodr\Data\Transform\TransformerInterface">
+            <type>\CrazyCodr\Data\Transform\TransformerInterface</type>
+          </tag>
+        </docblock>
+        <argument line="0">
+          <name>$name</name>
+          <default></default>
+          <type>String</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="CrazyCodr\Data\Transform" line="181" package="\CrazyCodr/Data-Transform">
+        <name>getTransformers</name>
+        <full_name>\CrazyCodr\Data\Transform\TransformerContainer::getTransformers()</full_name>
+        <docblock line="181">
+          <description>Returns the collection of transformers</description>
+          <long-description></long-description>
+          <tag name="return" description="Collection of all transformers in the group" line="181" type="Array">
+            <type>Array</type>
+          </tag>
+        </docblock>
+      </method>
+    </class>
+    <source>eJzlWN1v2zYQfw+Q/+EeAtQOnBh7HLJ2DZx2CNBlQJZhD+tQ0NLJ0iKRGknFcYv877sjJZn6cOKsAzZkerLE433+fnekv/u+TMvDg8MDKQo0pYgQFlp83ixUrD9eCCs+3mghTaJ0ccZi8+Pjw4NjuEkzA1EujAGNpUaD0hoQsNKqKkElYJtdqOm7jIHkbYqwFAbde6nVUizzDVQy+7NCYK38XUn65jVvVAXrLM8B71CDRIzBKt4YIa06U6Zv65T0sKq3kbC4UnoDN9tVUHolZGaEzZR0UhTwrVghbIOec9An7SYnJSqbKg211E8S3zbiZNFJ5FmEkiKDHy9v6g/yFviJWDJykqcSLS3ODw98fIFnCyWtyCS5mBVljoVLZ7B+KS3qhKozG93VLh8efOEqsWFXKefCMdSCvgSd0lBCRVnmm0a03fL2TmgQWouRJRG5ClAlLEYW42Zl7n+03+GoY+u11zeZno35+GuKEiKR57RvndkUYirEjDB1ixuHDCFBlVw5kUNUaU052sbiSgrGUtXhTuQVJYpjTSoZ+ZVUVTnpsBaL0nLYBFqV32Fr36gC4TZjCCZ9vTFGmeEfqkTtP7FHGm2lpTMkcc24TYVckf8ZWTmFy8Qt8QssMZMrKKnsvCzDzMSMuNaNzLhAl39QBp0RZoFNGU6WSVev1PFIZUk1FCrOkgzjGblUYLEkHFGEUa4kOhf8ptPWyLaUpdCigCK752pxxoG94d2ktqqd7aCG42jTsEMRlwwuY6oQuRX5hPG3r1TbyxksahT4squkq7GuE+Uz1yjijQM6JQmWG1AkqTtMGMlNXV5v/ArXO+zQYhxUsCZBi7xWbnLkEc3ZmQ2DeQ1Xv3z4MPW7v9TaWJEi76N0csTlP3mzQht0ADOZcoQhz6bbrYEWfkZMhhtP3uzpKvO30fmw/Vmnqy9dCz+Mcf48jnlqBE546h/xNGK0cKKjpsu122pieSniBLPAoOVmQTwEateKqx8RyGK8ZwmG3LCPeXCNtdlOYjojhBtmHA984zJBTvDQzYAiQPct/Ww1w9z7TUHIiobb5AITUeV26med4QGw8Ta6zdqnxofo6oK5YYEMTesVu9Rvjc3Ouk2FC8OU2FSrdWf0nHv2vLvPjDXv7iN0PZhOACQoYc1du1vBhm7odjS2hfVxD03WuDE+OZdcsvkVZ6gmGgXGk3/odZ9pJBj4PXmyrrO6En3mbSE9n/+AknsSn1m4f2hV6oxfPfSohNRit/LrNMtxUmvtqB2jY238FeM1cOvTq1N6iSff0DODb+kJCcdPljTdIBUmDNmpnE670j2zoWl2sKf7ocPtMBWLFKNbjtkBiRX4Cm9l9ver55NDnQPnk8CrdZ3tdPN8hDk7OglnwvsbToLfnIXfe93xrGvlOhj9JD1n3wN4w7Yd8td282gXvMYyJ2zu7oT/sc4VkrOXZe1D2aevXCn7XlUyHm8prFsjXQyM7ZLfI28tfNdPWENzlogUHR6j8PzwzCYzpyGyT6MxnRm8d6MZ7zBfTSvuNImgWfBMfg0K8AKp9Z5OAIaT26VWPZocbvgi+whwnoF/d18V0t0uEjK8E4VLpXK4UDi4j3nHduO5D8RRPAxOkLVVd/n6RCeHTz58Lz4bq9P0sUPbNRbq7m90q38oh/9OJ+lnXrskPJL8/wXFK0mtcLKb6NPH2bnIUWjTy3j/H51dFYh4c/cqNED+iGedfyEewThThjFuSrr70yW2k5FEq+LJkfMCUD/oXKOjLjxktDZ3la17f30hrAlG1vD4AMHVeBdRnjogejTuR5RB0c4Z77DobBR01ezQosaA+1d1v9qNEW53oCHbHv4C+krlHw==</source>
+  </file>
+  <package name="global" full_name="global"/>
+  <package name="" full_name="">
+    <package name="CrazyCodr/Data-Transform" full_name="\CrazyCodr/Data-Transform"/>
+  </package>
+  <namespace name="CrazyCodr" full_name="CrazyCodr">
+    <namespace name="Data" full_name="CrazyCodr\Data">
+      <namespace name="Transform" full_name="CrazyCodr\Data\Transform"/>
+    </namespace>
+  </namespace>
+  <deprecated count="0"/>
+</project>
