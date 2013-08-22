@@ -90,8 +90,14 @@ class TransformingIterator implements \iterator, TransformerContainerInterface
             $datasource = array();
         }
 
+        //Wrap the array into an iterator
+        if(is_array($datasource))
+        {
+            $datasource = new \ArrayIterator($datasource);
+        }
+
         //Validate
-        if(!is_array($datasource) && !($datasource instanceof \Traversable))
+        if(!($datasource instanceof \Traversable))
         {
             throw new \InvalidArgumentException('Datasource must be either an array or \\Traversable');
         }
@@ -162,7 +168,7 @@ class TransformingIterator implements \iterator, TransformerContainerInterface
      */
 	public function key()
 	{
-		return key($this->datasource);
+		return $this->datasource->key();
 	}
 
     /**
@@ -175,12 +181,12 @@ class TransformingIterator implements \iterator, TransformerContainerInterface
 	{
 
         //Move to the next element
-        next($this->datasource);
+        $this->datasource->next();
 
         //Process the transformers
         if($this->valid())
         {
-            $this->transformedData = $this->transform(current($this->datasource), key($this->datasource));   
+            $this->transformedData = $this->transform($this->datasource->current(), $this->datasource->key());
         }
 
 	}
@@ -193,12 +199,12 @@ class TransformingIterator implements \iterator, TransformerContainerInterface
      */
     public function rewind()
     {
-        reset($this->datasource);
+        $this->datasource->rewind();
 
         //Process the transformers
         if($this->valid())
         {
-            $this->transformedData = $this->transform(current($this->datasource), key($this->datasource));   
+            $this->transformedData = $this->transform($this->datasource->current(), $this->datasource->key());
         }
         
     }
@@ -212,7 +218,7 @@ class TransformingIterator implements \iterator, TransformerContainerInterface
      */
     public function valid()
     {
-        return key($this->datasource) !== NULL;
+        return $this->datasource->key() !== NULL;
     }
 
     /**
