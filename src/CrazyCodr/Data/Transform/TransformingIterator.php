@@ -218,7 +218,7 @@ class TransformingIterator implements \iterator, TransformerContainerInterface
      */
     public function valid()
     {
-        return $this->datasource->key() !== NULL;
+        return $this->datasource->valid();
     }
 
     /**
